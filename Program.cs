@@ -6,13 +6,13 @@ namespace HMS
     {
         static void Main(string[] args)
         {
-            Refrigerator F1 = new Refrigerator("Zanussi");
-            Console.WriteLine(F1.app_name + " created");
-            F1.move("living room");
-            F1.color = "red";
-            Console.WriteLine("The " + F1.color + " " + F1.make + " " + F1.app_name + " is now in the " + F1.location);
-            F1.location = "conservatory";
-            Console.WriteLine("The " + F1.color + " " + F1.make + " " + F1.app_name + " is now in the " + F1.location);
+            Mammal F1 = new Mammal("cat", 'f', true, 3);
+            Console.WriteLine(F1.genus + " created");
+            F1.move(26);
+            F1.color = "tabby";
+            Console.WriteLine("The " + F1.color + " " + F1.genus + " is now in pen " + F1.pen_no);
+            F1.pen_no = 36;
+            Console.WriteLine("The " + F1.color + " " + F1.genus + " is now in pen " + F1.pen_no);
             
         }
     }
