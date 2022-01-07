@@ -4,31 +4,26 @@ using System.Text;
 
 namespace HMS
 {
-    class Refrigerator : IGuarantee
+    class Refrigerator : Appliance
     {
         public string app_name;
-        public string location;
         public string make;
+
         public Refrigerator(string m)
         {
             app_name = "Refrigerator";
-            location = "Kitchen";
             make = m;
         }
 
-        public string App_name
+        public override void move(string n)  // override required
         {
-            get { return app_name; }
-            set { app_name = value; }
-        }
-        public  void move()  // override removed now 
-        {
-            Console.WriteLine("being moved");
+            this.location = n;
+            Console.WriteLine("being moved to " + n);
         }
 
         public void guarantee()
         {
-            Console.WriteLine("This applicance is under guarantee");
+            Console.WriteLine("This appliance is under guarantee");
         }
     }
 }

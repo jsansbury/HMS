@@ -6,13 +6,21 @@ namespace HMS
 {
     abstract class Appliance
     {
-        public string color = "";
-        abstract public void move();
+        public string color = "white";
+        public string location;
+        abstract public void move(string n);
 
-        public string Color
+  /*      public string Color
         {
             get { return color; }
             set { color = value; }
         }
+
+        public string Location
+        {
+            get { return location; }
+            set { color = value; }
+        }*/
+
     }
 }
